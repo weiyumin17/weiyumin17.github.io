@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            padding: 20px 50px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: rgba(255, 255, 255, 0.9);
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #1a73e8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        .auth-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .auth-buttons button {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background-color 0.3s;
+        }
+
+        .login {
+            background-color: transparent;
+            color: #1a73e8;
+        }
+
+        .signup {
+            background-color: #1a73e8;
+            color: white;
+        }
+
+        .signup:hover {
+            background-color: #1557b0;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="logo">YUME</div>
+        <nav class="nav-links">
+            <a href="index00.html" target="c1">Home</a>
+            <a href="index02.html" target="c1">AI Article</a> 
+            <a href="index01.html" target="c1">AI Tool</a>
+            <a href="index03.html" target="c1">Contact</a>
+        </nav>
+        <div class="auth-buttons">
+            <button class="login">Login</button>
+            <button class="signup">SignUp</button>
+        </div>
+    </header>
+</body>
+</html> 

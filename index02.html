@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Article</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-image: url('images/bg-splash.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            min-height: 100vh;
+        }
+
+        .article-container {
+            padding: 120px 5% 40px;
+            display: flex;
+            justify-content: center;
+            align-items: stretch;
+            gap: 30px;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+
+        .article-card {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 30px;
+            border-radius: 15px;
+            flex: 1;
+            max-width: 400px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-icon {
+            width: 80px;
+            height: 80px;
+            margin: 0 auto 20px;
+        }
+
+        .article-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .article-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .article-content {
+            text-align: left;
+            flex-grow: 1;
+            margin-bottom: 20px;
+        }
+
+        .article-content p {
+            margin-bottom: 15px;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        .read-more {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #1a73e8;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .read-more:hover {
+            background-color: #1557b0;
+        }
+
+        @media (max-width: 1024px) {
+            .article-container {
+                padding: 100px 20px 40px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .article-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .article-card {
+                width: 100%;
+                max-width: 500px;
+            }
+        }
+
+        .article-detail {
+            display: none;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 20px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+
+        .article-detail.active {
+            display: block;
+            animation: slideDown 0.5s ease;
+        }
+
+        .article-detail:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .detail-title {
+            font-size: 20px;
+            color: #333;
+            margin-bottom: 15px;
+        }
+
+        .detail-content {
+            text-align: left;
+            line-height: 1.6;
+            color: #444;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            color: #333;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="nav.html" frameborder="0" style="width:100%; height:70px; border:none;"></iframe>
+    
+    <div class="article-container">
+        <div class="article-card">
+            <div class="article-icon">
+                <img src="images/001.jpg" alt="AI Article 1">
+            </div>
+            <h2 class="article-title">人工智能发展史</h2>
+            <div class="article-content">
+                <p>从图灵测试到深度学习，人工智能经历了漫长的发展历程。相关文章有助于了解AI发展的重要里程碑...</p>
+                <p>包括机器学习、神经网络、深度学习等关键技术的演进过程。</p>
+            </div>
+            <a href="#" class="read-more">阅读更多</a>
+            <div class="article-detail">
+                <h3 class="detail-title">深入了解AI发展历程</h3>
+                <div class="detail-content">
+                    <p>深入探讨人工智能的发展历程，从最早的图灵测试概念提出，到当代深度学习的突破性进展。
+                    </p>
+                    <ul>
+                        <li>《普融花：人工智能化的进化与发展》：将AI的发展分为诞生与萌芽、黄金发展、低谷与瓶颈、复苏与繁荣等阶段，阐述了各阶段的特点和代表事件，如1950年图灵提出“图灵测试”、20世纪60年代神经网络等技术出现、70-80年代因计算能力限制进入寒冬期、90年代后随着计算机技术发展迎来繁荣期等。</li>
+                        <li>《人工智能：一种现代方法》：作者罗素等，全面阐述了AI的基础理论、主要技术以及各领域应用，是了解AI技术发展脉络的经典读物。</li>
+                        <li>《深度学习》：作者伊恩·古德费洛等，系统介绍了深度学习的起源、发展以及在图像识别等领域的突破，对理解AI近几十年的快速发展有重要意义。</li>
+                        <li>《人工智能前沿研究与产业发展报告2024》：系统分析了2023-2024年AI的发展态势，如语言模型创新、多模态支持大模型商业化、人形机器人市场增长、AI融入汽车行业产业链、AI芯片市场爆发等。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="article-icon">
+                <img src="images/002.jpg" alt="AI Article 2">
+            </div>
+            <h2 class="article-title">AI应用现状</h2>
+            <div class="article-content">
+                <p>人工智能已经渗透到我们生活的方方面面，从智能助手到自动驾驶...</p>
+                <p>探讨AI技术在医疗、教育、金融等领域的具体应用案例。</p>
+            </div>
+            <a href="#" class="read-more">阅读更多</a>
+            <div class="article-detail">
+                <h3 class="detail-title">AI应用的现状分析</h3>
+                <div class="detail-content">
+                    <p>将详细探讨AI技术在各个领域的具体应用：</p>
+                    <ul>
+                        <li>《AI技术应用:让未来变得更智能》：介绍了AI技术在多个领域的应用。在医疗领域，可辅助医生诊断疾病、助力手术及管理患者数据；交通领域，自动驾驶技术通过感知、决策和控制环节实现，提高行车安全性和交通效率；工业生产中，实现生产流程的自动化和智能化，还能预测设备故障；此外，在金融、教育、安防等行业也有着广泛应用。</li>
+                        <li>《AI for Technology:技术智能在高技术领域的应用实践与未来展望》：阐述了AI在自然科学和高技术领域的应用，如DeepMind辅助发现数学猜想和定理证明，AlphaFold2预测蛋白质结构，以及将强化学习用于优化托卡马克内部的核聚变等离子体控制等。还介绍了AI for Technology的概念、与狭义AI for Science的区别，以及其面临的挑战。</li>
+                        <li>《AI知识库:智能技术在知识管理中的应用》：讲述了AI知识库在知识管理中的应用，包括借助自然语言处理等技术实现智能知识采集与整合，运用深度学习算法进行精准知识分类与标注，根据用户多维度信息提供智能知识推荐，构建知识图谱以呈现知识关联，以及通过智能问答系统辅助决策等。</li>
+                        <li>《AI技术赋能，智慧教育智慧成长》：深入探讨了AI在教育领域的应用，如智能辅导、智能评分与评测、虚拟教师与在线教育、智能课堂管理等。还阐述了AI赋能个性化学习的表现，以及在促进教育公平与资源共享、助力教育管理与教学效率提升等方面的作用，同时展望了AI技术在智慧教育中的发展趋势。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="article-card">
+            <div class="article-icon">
+                <img src="images/003.jpg" alt="AI Article 3">
+            </div>
+            <h2 class="article-title">AI未来展望</h2>
+            <div class="article-content">
+                <p>人工智能技术正在快速发展，未来将会如何改变我们的生活和工作方式？</p>
+                <p>探讨AI技术的发展趋势和潜在影响。</p>
+            </div>
+            <a href="#" class="read-more">阅读更多</a>
+            <div class="article-detail">
+                <h3 class="detail-title">AI技术未来展望</h3>
+                <div class="detail-content">
+                    <p>探讨AI技术的未来发展方向：</p>
+                    <ul>
+                        <li>《人工智能技术发展趋势及应用：引领未来的智慧时代》：人工智能技术发展呈现出多个趋势。机器学习和深度学习成为核心，通过大数据支持不断优化算法。自然语言处理技术突破，使机器能更好地理解和生成语言，智能语音助手应用将更广泛。图像识别技术取得重大突破，在多个领域广泛应用。此外，AI在医疗健康、金融科技以及智慧城市等领域的应用也在不断拓展。</li>
+                        <li>《斯坦福教授吴恩达揭秘：AI发展5个的重要趋势以及如何抓住其中的机会》：吴恩达指出了AI的五个发展趋势。一是AI计算的速度会越来越快且越来越便宜。二是AI让创意验证的速度加快。三是图像分析、理解和处理技术的更新会带来新应用。四是数据传输的成本远低于数据通过AI加工的成本。五是非结构化数据的数据工程变得更加重要。</li>
+                        <li>《人工智能发展趋势：引领未来的科技浪潮》：在技术突破与创新方面，深度学习将深化发展，强化学习将广泛应用，量子计算与人工智能将融合。在行业应用拓展方面，AI将在医疗保健、金融、制造业、教育等领域发挥重要作用。同时，伦理与社会问题日益受到关注，人才需求与培养也成为关键。</li>
+                        <li>《人工智能或加剧社会发展鸿沟》：国际劳工组织的报告指出，AI技术的不平衡应用可能加剧收入水平和生活质量的不平衡，还探讨了AI对劳动市场的冲击以及劳动者如何在AI时代不被淘汰等问题。</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.querySelectorAll('.read-more').forEach(button => {
+            button.addEventListener('click', function(e) {
+                e.preventDefault();
+                const card = this.closest('.article-card');
+                const detail = card.querySelector('.article-detail');
+                
+                // 关闭其他打开的详情
+                document.querySelectorAll('.article-detail.active').forEach(activeDetail => {
+                    if (activeDetail !== detail) {
+                        activeDetail.classList.remove('active');
+                    }
+                });
+
+                // 切换当前详情的显示状态
+                detail.classList.toggle('active');
+            });
+        });
+    </script>
+
+    <footer class="footer">
+        @2024 WYM 版权所有
+    </footer>
+</body>
+</html> 

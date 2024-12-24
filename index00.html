@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简介</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            background-image: url('images/bg2.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-container {
+            flex: 1;
+            padding: 120px 5% 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 800px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .profile-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .avatar {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 0 auto 30px;
+            overflow: hidden;
+            border: 5px solid rgba(255, 255, 255, 0.8);
+        }
+
+        .avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .description {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #444;
+            margin-bottom: 30px;
+            text-align: left;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+            margin-bottom: 30px;
+        }
+
+        .skill-tag {
+            background: rgba(26, 115, 232, 0.1);
+            color: #1a73e8;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9em;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+        }
+
+        .social-links a {
+            color: #1a73e8;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .social-links a:hover {
+            color: #1557b0;
+        }
+
+        .footer {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            text-align: center;
+            color: #333;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 1000;
+        }
+
+        @media (max-width: 768px) {
+            .profile-container {
+                padding: 100px 20px 40px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .description {
+                font-size: 1em;
+            }
+        }
+
+        iframe {
+            width: 100%;
+            height: 80px;
+            border: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <iframe src="nav.html" scrolling="no"></iframe>
+    
+    <div class="profile-container">
+        <div class="profile-card">
+            <div class="avatar">
+                <img src="images/avatar.jpg" alt="个人头像">
+            </div>
+            <h1>魏瑜敏</h1>
+            <p class="subtitle">陕西西安 | 西北大学</p>
+            <div class="description">
+                <p>你好！我是就读于西北大学网络与新媒体专业的一名学生。这是我的个人AI知识库，一个专为提升知识管理效率和深度学习而设计的智能平台。AI知识库是一个不断进化的学习伙伴，能够帮助我们在信息爆炸的时代中，高效地管理和运用知识，实现个人和职业的成长。</p>
+                <p>让我们一起，用知识塑造未来。</p>
+            </div>
+            <div class="skills">
+                <span class="skill-tag">AI</span>
+                <span class="skill-tag">AIGC</span>
+                <span class="skill-tag">人工智能</span>
+                <span class="skill-tag">ChatGPT</span>
+                <span class="skill-tag">AI助手</span>
+                <span class="skill-tag">大语言模型</span>
+            </div>
+            <div class="social-links">
+                <a href="https://github.com/yourusername">GitHub</a>
+                <a href="mailto:your.email@example.com">Email</a>
+                <a href="https://linkedin.com/in/yourusername">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        @2024 WYM 版权所有
+    </footer>
+</body>
+</html> 
